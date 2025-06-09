@@ -1,4 +1,4 @@
-name: Build
+name: Build with SonarCloud
 
 on:
   push:
@@ -11,18 +11,19 @@ jobs:
   build:
     name: SonarCloud
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # importante para Sonar
+          fetch-depth: 0
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           projectBaseDir: .
-          args: >
-            -Dsonar.projectKey=crispolas_Projeto-Sonar
-            -Dsonar.organization=Projeto-Sonar
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_PROJECT_KEY: crispolas_Projeto-Sonar  # <- Isso vem do SonarCloud
+          SONAR_ORGANIZATION: sonar-projeto           # <- Este é o nome da sua organização no SonarCloud
+          SONAR_HOST_URL: https://sonarcloud.io
 
