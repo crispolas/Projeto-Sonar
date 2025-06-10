@@ -56,14 +56,14 @@ A organização do projeto foi pensada para separar claramente as responsabilida
 |
 ├── app/                       # Contém todo o código-fonte da aplicação FastAPI
 │   ├── routers/               # Define as rotas (endpoints) da API
-│   ├── crud.py                # Contém as funções de Create, Read, Update, Delete (lógica de negócio)
-│   ├── database.py            # Configuração da conexão com o banco de dados SQLite
+│   ├── crud.py                # Contém as funções de Create, Read, Update, Delete
+│   ├── database.py            # Configuração da conexão com o banco de dados
 │   ├── main.py                # Ponto de entrada da aplicação FastAPI
 │   ├── models.py              # Modelos de dados da SQLAlchemy (tabelas do banco)
-│   └── schemas.py             # Schemas Pydantic para validação de dados de entrada/saída
+│   └── schemas.py             # Schemas Pydantic para validação de dados
 |
 ├── test/                      # Contém os testes automatizados da aplicação
-|   └── test.py                # Scripts de teste com Pytest para validar a API
+│   └── test.py                # Scripts de teste com Pytest para validar a API
 |
 ├── .gitignore                 # Especifica arquivos a serem ignorados pelo Git
 ├── README.md                  # Este arquivo de documentação
