@@ -20,7 +20,7 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         with:
-            args: "-Dsonar.projectKey=crispolas_Projeto-Sonar -Dsonar.organization=sonar-projeto -Dsonar.tests=src/test -X"
+            args: "-Dsonar.projectKey=crispolas_Projeto-Sonar -Dsonar.organization=sonar-projeto -Dsonar.tests=test -X"
             projectBaseDir: .
         env:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
