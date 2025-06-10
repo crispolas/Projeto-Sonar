@@ -23,7 +23,7 @@ jobs:
           projectBaseDir: .
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: crispolas_Projeto-Sonar  # <- Isso vem do SonarCloud
-          SONAR_ORGANIZATION: sonar-projeto           # <- Este é o nome da sua organização no SonarCloud
+          SONAR_PROJECT_KEY: crispolas_Projeto-Sonar
+          SONAR_ORGANIZATION: sonar-projeto
           SONAR_HOST_URL: https://sonarcloud.io
 
