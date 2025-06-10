@@ -20,11 +20,9 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         with:
-          args: "-X"
-          projectBaseDir: .
+            args: "-Dsonar.projectKey=crispolas_Projeto-Sonar -Dsonar.organization=sonar-projeto -X"
+            projectBaseDir: .
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: crispolas_Projeto-Sonar
-          SONAR_ORGANIZATION: sonar-projeto
-          SONAR_HOST_URL: https://sonarcloud.io
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            SONAR_HOST_URL: https://sonarcloud.io
 
