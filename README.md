@@ -74,7 +74,6 @@ A organização do projeto foi pensada para separar claramente as responsabilida
 
 Após a configuração do pipeline de CI/CD, cada `push` para o repositório disparou uma nova análise no SonarCloud. O dashboard resultante da última análise nos forneceu insights cruciais sobre a qualidade do nosso código:
 
-**(COLE A IMAGEM DO SEU DASHBOARD DO SONARCLOUD AQUI)**
 ![Dashboard do SonarCloud](https://i.imgur.com/link-da-imagem.png)
 
 A análise do dashboard revelou os seguintes pontos:
@@ -83,7 +82,7 @@ A análise do dashboard revelou os seguintes pontos:
 
 2.  **Causa da Falha: Cobertura de Testes**: A análise apontou que a falha ocorreu devido a **`0.0% de Cobertura de Testes`** no código novo, enquanto o critério mínimo exigido era de 80%. Isso significa que nosso script de teste (`test/test.py`) não está efetivamente testando a lógica de negócio implementada na pasta `app/`, representando um risco, pois bugs podem passar despercebidos.
 
-3.  **Pontos Positivos: 0 Issues**: Um resultado muito positivo foi que, apesar da baixa cobertura, a ferramenta **não detectou nenhum `Issue`**. Isso indica que o código está bem escrito, sem bugs óbvios, vulnerabilidades de segurança conhecidas ou "code smells".
+3.  **Pontos Positivos:**: Um resultado muito positivo foi que, apesar da baixa cobertura, a ferramenta **não detectou nenhum `Issue`**. Isso indica que o código está bem escrito, sem bugs óbvios e vulnerabilidades de segurança.
 
 Com essa demonstração, vemos que o SonarCloud é eficiente no que diz respeito a validação da qualidade do código e ao mesmo tempo também consegue impor boas práticas de engenharia, como a necessidade de testes.
 
