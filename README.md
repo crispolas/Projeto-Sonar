@@ -47,7 +47,7 @@ O projeto usado para a demonstração foi uma **API simples e funcional para ger
 ### Estrutura de Diretórios
 
 A organização do projeto foi pensada para separar claramente as responsabilidades de cada componente, seguindo boas práticas de desenvolvimento:
-
+```
 /
 |
 ├── .github/
@@ -69,7 +69,7 @@ A organização do projeto foi pensada para separar claramente as responsabilida
 ├── README.md                  # Este arquivo de documentação
 ├── requirements.txt           # Lista de dependências Python do projeto
 └── sonar-project.properties   # Arquivo de configuração para o scanner do SonarCloud
-
+```
 ### Análise dos Resultados
 
 Após a configuração do pipeline de CI/CD, cada `push` para o repositório disparou uma nova análise no SonarCloud. O dashboard resultante da última análise nos forneceu insights cruciais sobre a qualidade do nosso código:
