@@ -94,7 +94,7 @@ O projeto usado para a demonstração foi uma **API simples e funcional de TaskB
 
 Após a configuração do pipeline de CI/CD, cada `push` para o repositório disparou uma nova análise no SonarCloud. O dashboard resultante da última análise nos forneceu insights cruciais sobre a qualidade do nosso código:
 
-![Dashboard do SonarCloud](https://imgur.com/a/sW5IzqK)
+![Dashboard do SonarCloud](https://i.imgur.com/a/sW5IzqK.png)
 
 A análise do dashboard revelou os seguintes pontos:
 
