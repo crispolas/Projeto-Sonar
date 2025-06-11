@@ -8,7 +8,7 @@
 * [Gabriel Crispim]
 * [Arthur José Carvalho Fernandes]
 * [Cleiton Mendes Dos Santos]
-* [Nome6]
+* [Miguel Garcia Silva Correia]
 
 ---
 
