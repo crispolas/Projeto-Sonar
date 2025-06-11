@@ -3,7 +3,7 @@
 **Projeto da disciplina de Engenharia de Software**
 
 **Grupo:**
-* [Nome1]
+* [Carlos Eduardo Gonçalves Arantes]
 * [Nome2]
 * [Gabriel Crispim]
 * [Arthur José Carvalho Fernandes]
