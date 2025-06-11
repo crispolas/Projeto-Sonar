@@ -5,7 +5,7 @@
 **Grupo:**
 * [Nome1]
 * [Nome2]
-* [Nome3]
+* [Gabriel Crispim]
 * [Nome4]
 * [Nome5]
 * [Nome6]
