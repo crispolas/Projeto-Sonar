@@ -29,7 +29,7 @@ jobs:
           pip install pytest pytest-cov httpx # Instala as ferramentas de teste
 
       - name: Run Tests and Generate Coverage Report
-        run: pytest --cov=app --cov-report=xml:coverage.xml test/
+        run: pytest --cov=app --cov-report=xml:coverage.xml tests/
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
