@@ -6,7 +6,7 @@
 * [Nome1]
 * [Nome2]
 * [Gabriel Crispim]
-* [Nome4]
+* [Arthur José Carvalho Fernandes]
 * [Nome5]
 * [Nome6]
 
