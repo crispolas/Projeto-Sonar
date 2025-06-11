@@ -94,7 +94,7 @@ O projeto usado para a demonstração foi uma **API simples e funcional de TaskB
 
 Após a configuração do pipeline de CI/CD, cada `push` para o repositório disparou uma nova análise no SonarCloud. O dashboard resultante da última análise nos forneceu insights cruciais sobre a qualidade do nosso código:
 
-![Dashboard do SonarCloud](https://i.imgur.com/link-da-imagem.png)
+![Dashboard do SonarCloud](https://imgur.com/a/sW5IzqK)
 
 A análise do dashboard revelou os seguintes pontos:
 
@@ -112,20 +112,19 @@ Com essa demonstração, vemos que o SonarCloud é eficiente no que diz respeito
 
 A implementação prática do SonarCloud em nosso pipeline de CI/CD apresentou uma série de desafios técnicos, cuja resolução foi fundamental para o aprendizado da equipe.
 
-* **Configuração do Pipeline de CI/CD:** O principal obstáculo foi a correta configuração do arquivo de workflow (`.github/workflows/build.yml`). O pipeline falhou repetidamente devido à ausência de propriedades mandatórias (`sonar.projectKey` e `sonar.organization`). A depuração foi complexa e extremamente demorada, pois exigiu a análise detalhada dos logs do GitHub Actions para identificar a causa raiz do problema, gerando um ciclo de tentativas e erros.
+* **Configuração do Pipeline de CI/CD:** O principal obstáculo foi a correta configuração do arquivo de workflow (`.github/workflows/build.yml`). O pipeline falhou repetidamente devido à ausência das propriedades (`sonar.projectKey` e `sonar.organization`). A depuração foi complexa e extremamente demorada, pois exigiu a análise detalhada dos logs do GitHub Actions para identificar a causa raiz do problema, gerando um ciclo de tentativas e erros.
+  
+    > ![Figura 1:]([(https://imgur.com/T2Og7A4)])
 
-    > ![Figura 1:]([LINK])
+* **Muitos e muitos erros na configuração do arquivo de testes e comunicação com o Sonar:** Encontramos erros na configuração de arquivos de suporte, como o `sonar-project.properties`, que continha valores incorretos para a organização. Um desafio adicional foi o erro `invalid value for the sonar.tests property`, que ocorria porque o scanner procurava um diretório de testes em um caminho inexistente.
 
-* **Ajuste Fino de Propriedades e Ambiente:** Encontramos erros na configuração de arquivos de suporte, como o `sonar-project.properties`, que continha valores incorretos para a organização. Um desafio adicional foi o erro `invalid value for the sonar.tests property`, que ocorria porque o scanner procurava um diretório de testes em um caminho inexistente.
-
-    > ![Figura 2:]([LINK])
+    > ![Figura 2:]([https://imgur.com/uAjqkeU])
 
 
 * **Diagnóstico e Correção Sequencial:** A solução final não foi um único ajuste, mas o resultado de uma correção sequencial de múltiplos problemas, incluindo a configuração de chaves de acesso, o ajuste de diretórios e a sincronização do repositório. O processo foi documentado nas interações do grupo até a validação final do funcionamento da ferramenta.
 
-    > ![Figura 4:]([LINK])
+    > ![Figura 3:]([https://imgur.com/2EV4sjZ])
 
-A resolução desses desafios nos proporcionou um profundo conhecimento prático sobre a integração de ferramentas de DevSecOps, a importância da precisão na configuração de arquivos YAML e a dinâmica de trabalho em equipe para depurar sistemas complexos.
 
 ---
 
