@@ -4,7 +4,7 @@
 
 **Grupo:**
 * [Carlos Eduardo Gonçalves Arantes]
-* [Nome2]
+* [Davi Lucas Ribeiro Costa]
 * [Gabriel Crispim]
 * [Arthur José Carvalho Fernandes]
 * [Cleiton Mendes Dos Santos]
