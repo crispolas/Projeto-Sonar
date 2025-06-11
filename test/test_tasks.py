@@ -29,5 +29,6 @@ def test_delete_task():
     deleted = client.delete(f"/tasks/{task_id}")
     assert deleted.status_code == 204
 
-    not_found = client.get(f"/tasks/{task_id}")
-    assert not_found.status_code == 200  
+    response = client.get("/tasks/")
+    assert response.status_code == 200
+    assert all(task["id"] != task_id for task in response.json())
