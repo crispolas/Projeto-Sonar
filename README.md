@@ -12,16 +12,18 @@
 
 ---
 
-## 1. Introdução à Ferramenta: SonarCloud ☁️
+## 1. Introdução à Ferramenta: SonarQube e SonarCloud
 
-O **SonarCloud** é um serviço de análise de código estático baseado em nuvem, que se integra perfeitamente a pipelines de CI/CD para detectar bugs, vulnerabilidades de segurança e outros erros. E ele é Saas.
+O SonarQube é uma plataforma open-source que analisa o código-fonte para encontrar problemas de qualidade, como bugs, vulnerabilidades, códigos duplicados, mal formatados ou de difícil manutenção. Ele é instalado localmente ou em um servidor da empresa.
+
+No nosso caso, utilizamos o SonarCloud, que é a versão em nuvem do SonarQube. Ele possui a mesma função principal, mas elimina a necessidade de instalação local, configuração de servidores ou uso de Docker. Isso facilita muito o processo de integração com repositórios e CI/CD, oq torna o processo muito mais fácil.
 
 ### Principais Recursos e Vantagens
 
 * **Análise Automática**: Integrado com plataformas como GitHub, GitLab e Bitbucket, o SonarCloud analisa automaticamente cada *pull request* e *branch*.
-* **Detecção Abrangente**: Identifica desde bugs simples até vulnerabilidades de segurança complexas.
+* **Detecção Abrangente**: Identifica desde bugs simples até vulnerabilidades de segurança complexas, inclusive code smells.
 * **Qualidade do Código (Quality Gate)**: Permite configurar critérios de qualidade que precisam ser atendidos para que um código possa ser mesclado.
-* **Interface Intuitiva**: Apresenta os resultados em um dashboard claro, mostrando métricas como cobertura de testes, duplicação de código e dívida técnica.
+* **Interface Intuitiva**: Apresenta os resultados em um dashboard claro e objetivo.
 
 ### Limitações
 
@@ -32,11 +34,7 @@ O **SonarCloud** é um serviço de análise de código estático baseado em nuve
 
 ## 2. Demonstração Prática e Configuração
 
-Nesta seção, demonstramos como configurar o SonarCloud para analisar uma API de TaskBoard desenvolvida em Python com FastAPI.
-
-### O Projeto de Exemplo: TaskBoard API
-
-O projeto usado para a demonstração foi uma **API simples e funcional para gerenciamento de tarefas**, que permite criar, listar, atualizar e excluir itens. Ele foi desenvolvido com as seguintes tecnologias:
+O projeto usado para a demonstração foi uma **API simples e funcional de TaskBoard**, que permite criar, listar, atualizar e excluir itens. Ele foi desenvolvido com:
 
 * **Python** 3.11+
 * **FastAPI**
@@ -46,7 +44,6 @@ O projeto usado para a demonstração foi uma **API simples e funcional para ger
 
 ### Estrutura de Diretórios
 
-A organização do projeto foi pensada para separar claramente as responsabilidades de cada componente, seguindo boas práticas de desenvolvimento:
 ```
 /
 |
@@ -70,6 +67,7 @@ A organização do projeto foi pensada para separar claramente as responsabilida
 ├── requirements.txt           # Lista de dependências Python do projeto
 └── sonar-project.properties   # Arquivo de configuração para o scanner do SonarCloud
 ```
+
 ### Análise dos Resultados
 
 Após a configuração do pipeline de CI/CD, cada `push` para o repositório disparou uma nova análise no SonarCloud. O dashboard resultante da última análise nos forneceu insights cruciais sobre a qualidade do nosso código:
