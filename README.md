@@ -4,7 +4,7 @@
 
 **Grupo:**
 * [Nome1]
-* [Nome2]
+* [Davi Lucas Ribeiro]
 * [Gabriel Crispim]
 * [Arthur José Carvalho Fernandes]
 * [Nome5]
