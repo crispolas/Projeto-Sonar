@@ -32,7 +32,29 @@ No nosso caso, utilizamos o SonarCloud, que é a versão em nuvem do SonarQube. 
 
 ---
 
-## 2. Demonstração Prática e Configuração
+### Configuração
+
+Para a realização do trabalho, foi feita a configuração completa do SonarCloud:
+
+* **Instalação e Configuração Inicial**
+    O processo de "instalação" consistiu na criação de uma conta na plataforma SonarCloud, e vinculando-a a uma conta do GitHub (Do Crispim). Em seguida, foi criada uma nova Organização dentro do SonarCloud e importamos o repositório do projeto para ser analisado. Também foi gerado e configurado o `SONAR_TOKEN` como um *secret* no repositório do GitHub para permitir a comunicação segura entre os serviços.
+
+* **Execução via Pipeline de CI/CD**
+    A execução da análise não foi feita em uma máquina local, mas sim dentro do ambiente do GitHub Actions, que atua como nosso pipeline de CI/CD. Cada `git push` para o repositório disparou o workflow definido no arquivo `.github/workflows/build.yml`, que por sua vez executou o scanner do SonarCloud de forma automatizada.
+
+* **Integração com Outro Serviço**
+   Houve uma integração bem-sucedida entre três serviços: **GitHub** (como repositório de código e gatilho para as ações), **GitHub Actions** (como o motor de automação que executa o pipeline) e **SonarCloud** (como o serviço externo que realiza a análise de qualidade de código).
+
+* **Logs e Outputs**
+    Analisamos os resultados e saídas (outputs) em diferentes pontos do processo:
+    1.  **Logs do GitHub Actions:** Onde acompanhamos a execução de cada passo do workflow em tempo real e depuramos os erros de configuração.
+    2.  **Dashboard do SonarCloud:** A interface web onde o relatório completo da análise é apresentado, incluindo as métricas de qualidade e o status do Quality Gate.
+    3.  **Checks no GitHub:** O SonarCloud reporta o status da análise de volta para o GitHub, exibindo um "check" de sucesso ou falha no commit ou pull request.
+
+* **Configuração Básica**
+    A configuração básica do projeto foi realizada através de dois arquivos principais: o `.github/workflows/build.yml`, que define todas as etapas do pipeline, e o `sonar-project.properties`, que instrui o scanner sobre características do projeto, como a localização do código-fonte.
+
+## 2. Demonstração Prática
 
 O projeto usado para a demonstração foi uma **API simples e funcional de TaskBoard**, que permite criar, listar, atualizar e excluir itens. Ele foi desenvolvido com:
 
