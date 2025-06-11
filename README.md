@@ -81,8 +81,8 @@ O projeto usado para a demonstração foi uma **API simples e funcional de TaskB
 │   ├── models.py              # Modelos de dados da SQLAlchemy (tabelas do banco)
 │   └── schemas.py             # Schemas Pydantic para validação de dados
 |
-├── test/                      # Contém os testes automatizados da aplicação
-│   └── test.py                # Scripts de teste com Pytest para validar a API
+├── tests/                      # Contém os testes automatizados da aplicação
+│   └── test_tasks.py                # Scripts de teste com Pytest para validar a API
 |
 ├── .gitignore                 # Especifica arquivos a serem ignorados pelo Git
 ├── README.md                  # Este arquivo de documentação
