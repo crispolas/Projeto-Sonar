@@ -114,16 +114,16 @@ A implementação prática do SonarCloud em nosso pipeline de CI/CD apresentou u
 
 * **Configuração do Pipeline de CI/CD:** O principal obstáculo foi a correta configuração do arquivo de workflow (`.github/workflows/build.yml`). O pipeline falhou repetidamente devido à ausência das propriedades (`sonar.projectKey` e `sonar.organization`). A depuração foi complexa e extremamente demorada, pois exigiu a análise detalhada dos logs do GitHub Actions para identificar a causa raiz do problema, gerando um ciclo de tentativas e erros.
   
-    > ![Figura 1:]([(https://imgur.com/T2Og7A4)])
+    > ![Figura 1:](https://i.imgur.com/uAjqkeU.png)
 
 * **Muitos e muitos erros na configuração do arquivo de testes e comunicação com o Sonar:** Encontramos erros na configuração de arquivos de suporte, como o `sonar-project.properties`, que continha valores incorretos para a organização. Um desafio adicional foi o erro `invalid value for the sonar.tests property`, que ocorria porque o scanner procurava um diretório de testes em um caminho inexistente.
 
-    > ![Figura 2:]([https://imgur.com/uAjqkeU])
+    > ![Figura 2:](https://i.imgur.com/T2Og7A4.png)
 
 
 * **Diagnóstico e Correção Sequencial:** A solução final não foi um único ajuste, mas o resultado de uma correção sequencial de múltiplos problemas, incluindo a configuração de chaves de acesso, o ajuste de diretórios e a sincronização do repositório. O processo foi documentado nas interações do grupo até a validação final do funcionamento da ferramenta.
 
-    > ![Figura 3:]([https://imgur.com/2EV4sjZ])
+    > ![Figura 3:](https://i.imgur.com/2EV4sjZ.png)
 
 
 ---
